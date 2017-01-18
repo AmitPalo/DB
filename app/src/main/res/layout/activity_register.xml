@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_register"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.amitpalo.loginapp.RegisterActivity">
+
+        <EditText
+            android:id="@+id/registerNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="16dp"
+            android:gravity="left"
+            android:hint="@string/name"
+            android:lines="1"
+            android:textColor="@android:color/holo_orange_light"
+            android:textColorHint="@android:color/holo_orange_light"
+            android:textSize="8pt" />
+
+
+        <EditText
+            android:id="@+id/registerPasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/registerNameEditText"
+            android:layout_margin="16dp"
+            android:gravity="left"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:textColor="@android:color/holo_orange_light"
+            android:textColorHint="@android:color/holo_orange_light"
+            android:textSize="8pt" />
+
+        <EditText
+            android:id="@+id/registerEmailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/registerPasswordEditText"
+            android:layout_margin="16dp"
+            android:gravity="left"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            android:textColor="@android:color/holo_orange_light"
+            android:textColorHint="@android:color/holo_orange_light"
+            android:textSize="8pt" />
+
+        <EditText
+            android:id="@+id/registerPhoneEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/registerEmailEditText"
+            android:layout_margin="16dp"
+            android:gravity="left"
+            android:hint="@string/phone"
+            android:inputType="phone"
+            android:lines="1"
+            android:textColor="@android:color/holo_orange_light"
+            android:textColorHint="@android:color/holo_orange_light"
+            android:textSize="8pt" />
+
+        <Button
+            android:id="@+id/done_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/registerPhoneEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/done"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="8pt" />
+
+    </RelativeLayout>
+</ScrollView>

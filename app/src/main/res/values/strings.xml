@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Login App</string>
+    <string name="login">Login</string>
+    <string name="name">name</string>
+    <string name="password">password</string>
+    <string name="login_button">LOGIN</string>
+    <string name="register_button">REGISTER</string>
+    <string name="register">Register</string>
+    <string name="email">email</string>
+    <string name="phone">phone no.</string>
+    <string name="done">DONE</string>
+    <string name="Home">Home</string>
+</resources>
