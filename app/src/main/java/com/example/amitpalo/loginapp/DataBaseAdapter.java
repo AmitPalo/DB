@@ -1,12 +1,9 @@
 package com.example.amitpalo.loginapp;
 
-import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 import android.widget.Toast;
 
 /**
@@ -63,9 +60,15 @@ import android.widget.Toast;
         private static final String EMAIL = "Email";
         private static final String PHONE = "Phone";
         private Context context;
-        private static final String CREATE_TABLE = "CREATE TABLE" + TABLE_NAME + "(" + UID + " INTEGER PRIMARY KEY AUTOINCREMENT," + NAME + " VARCHAR(255)," +
-                "" + PASSWORD + " VARCHAR(255)," + EMAIL + " VARCHAR(255)," + PHONE + " BIGINT(10));";
-        private static final String DROP_TABLE = "DROP TABLE IF EXISTS" + TABLE_NAME;
+        private static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME
+                + "("
+                + UID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+                + NAME + " VARCHAR(255),"
+                + PASSWORD + " VARCHAR(255),"
+                + EMAIL + " VARCHAR(255),"
+                + PHONE + " BIGINT(10)"
+                + ");";
+        private static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
 
 
         public DataBaseHelper(Context context) {
@@ -80,6 +83,8 @@ import android.widget.Toast;
                 db.execSQL(CREATE_TABLE);
                 Toast.makeText(context,"DB CREATED",Toast.LENGTH_SHORT).show();
             } catch (SQLException e) {
+                Toast.makeText(context,"DB CREATION ERROR : "+e.getMessage()
+                        ,Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
         }
@@ -93,6 +98,8 @@ import android.widget.Toast;
                 onCreate(db);
 
             } catch (SQLException e) {
+                Toast.makeText(context,"DB UPGRADE ERROR : "+e.getMessage()
+                        ,Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
             }
 
